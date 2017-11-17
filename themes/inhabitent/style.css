@@ -416,7 +416,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: inherit; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -568,6 +568,31 @@ a {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
+.site-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  width: 65%; }
+
+.blog-content {
+  background: purple;
+  width: 70%; }
+
+.entry-title {
+  background: #248a83;
+  width: 70%;
+  min-height: 120px;
+  color: #fff;
+  text-transform: uppercase; }
+
 .sticky {
   display: block; }
 
@@ -582,7 +607,7 @@ a {
   display: inline; }
 
 .page-content,
-.entry-content,
+.entry-text,
 .entry-summary {
   margin: 1.5rem 0 0; }
 
@@ -601,6 +626,15 @@ a {
 
 .bypostauthor {
   display: block; }
+
+.site-footer {
+  background-image: url(../../../content-folder/dark-wood.png);
+  height: 320px; }
+
+.footer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 /*--------------------------------------------------------------
 # Media

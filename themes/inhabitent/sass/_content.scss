@@ -4,6 +4,25 @@
 
 /* Posts and pages */
 
+.site-area{
+	@include flex-center;
+	flex-flow: column wrap;
+	width: 65%;
+}
+
+.blog-content{
+	background: purple;
+	width: 70%;
+}
+
+.entry-title{
+	background: #248a83;
+	width: 70%;
+	min-height: 120px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
 .sticky {
 	display: block;
 }
@@ -22,7 +41,7 @@
 }
 
 .page-content,
-.entry-content,
+.entry-text,
 .entry-summary {
 	margin: $base__space-unit 0 0;
 }
