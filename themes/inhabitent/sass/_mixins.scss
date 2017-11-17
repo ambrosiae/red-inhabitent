@@ -17,3 +17,10 @@
 	justify-content: center;
 	margin: auto;
 }
+
+// Green-bg and white-color labels
+@mixin label-blocks{
+	background: #248a83;
+	color: #fff;
+	text-transform: uppercase;
+}

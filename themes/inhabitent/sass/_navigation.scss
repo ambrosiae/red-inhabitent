@@ -24,70 +24,76 @@ a {
 	}
 }
 
+.site-branding{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
+	.menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;	
+		background: rgba(255,255,255, 0.8);
+		width: 100%;
 
-			ul {
-				left: -999rem;
-				top: 0;
-			}
+		// ul {
+		// 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		// 	float: left;
+		// 	position: absolute;
+		// 	top: $base__space-unit;
+		// 	z-index: 99999;
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+		// 	ul {
+		// 		top: 0;
+		// 	}
 
-			a {
-				width: 200px;
-			}
+		// 	li {
+		// 		&:hover > ul,
+		// 		&.focus > ul {
+		// 			left: 100%;
+		// 		}
+		// 	}
 
-			:hover > a,
-			.focus > a {
-			}
+		// 	a {
+		// 		// width: 200px;
+		// 	}
 
-			a:hover,
-			a.focus {
-			}
-		}
+		// 	:hover > a,
+		// 	.focus > a {
+		// 	}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
+		// 	a:hover,
+		// 	a.focus {
+		// 	}
+		// }
+
+		// li:hover > ul,
+		// li.focus > ul {
+		// 	left: auto;
+		// }
 	}
 	li {
-		float: left;
-		position: relative;
+		display: inline-flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: auto;
 
 		&:hover > a,
 		&.focus > a {
 		}
-	}
+		
 	a {
-		display: block;
 		text-decoration: none;
 	}
+}
 
 	.current_page_item > a,
 	.current-menu-item > a,

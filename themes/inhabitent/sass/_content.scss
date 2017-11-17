@@ -11,16 +11,23 @@
 }
 
 .blog-content{
-	background: purple;
+	@include flex-center;
+	flex-flow: column wrap;	
 	width: 70%;
 }
 
-.entry-title{
-	background: #248a83;
+.entry-header{
+	@include label-blocks;
 	width: 70%;
-	min-height: 120px;
-	color: #fff;
-	text-transform: uppercase;
+	// min-height: 120px;
+}
+
+.entry-meta{
+	@include label-blocks;
+	justify-content: flex-end;	
+	display: flex;
+	width: 60%;
+	font-size: 0.8rem;
 }
 
 .sticky {
