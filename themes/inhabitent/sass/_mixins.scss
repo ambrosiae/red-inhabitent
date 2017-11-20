@@ -1,21 +1,35 @@
 // Rem output with px fallback
-@mixin font-size($sizeValue: 1){
+@mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
 // Center block
-@mixin center-block{
+@mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+// 70% width
+@mixin width70{
+	width: 70%;
+}
+
 // Flex center
 @mixin flex-center{
 	display: flex;
+	flex-flow: column wrap;
 	justify-content: center;
 	margin: auto;
+}
+
+// Flex start
+@mixin flex-start{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 // Green-bg and white-color labels

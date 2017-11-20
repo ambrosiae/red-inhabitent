@@ -4,32 +4,6 @@
 
 /* Posts and pages */
 
-.site-area{
-	@include flex-center;
-	flex-flow: column wrap;
-	width: 65%;
-}
-
-.blog-content{
-	@include flex-center;
-	flex-flow: column wrap;	
-	width: 70%;
-}
-
-.entry-header{
-	@include label-blocks;
-	width: 70%;
-	// min-height: 120px;
-}
-
-.entry-meta{
-	@include label-blocks;
-	justify-content: flex-end;	
-	display: flex;
-	width: 60%;
-	font-size: 0.8rem;
-}
-
 .sticky {
 	display: block;
 }
@@ -48,7 +22,7 @@
 }
 
 .page-content,
-.entry-text,
+.entry-content,
 .entry-summary {
 	margin: $base__space-unit 0 0;
 }
@@ -62,7 +36,6 @@
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
 }
 
 /* Comments */
@@ -72,4 +45,15 @@
 }
 .bypostauthor {
 	display: block;
+}
+
+/* Added */
+
+.blog{
+	@include flex-center;
+	@include width70;
+}
+
+.entry-title{
+	
 }

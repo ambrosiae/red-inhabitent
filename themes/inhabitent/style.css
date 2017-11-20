@@ -416,7 +416,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: inherit; }
+  color: royalblue; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -426,48 +426,41 @@ a {
   a:hover, a:active {
     outline: 0; }
 
-.site-branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
 /* Menus */
-.main-navigation .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  background: rgba(255, 255, 255, 0.8);
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
   width: 100%; }
-
-.main-navigation li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto; }
-  .main-navigation li a {
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .main-navigation ul ul {
+      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative; }
+  .main-navigation a {
+    display: block;
     text-decoration: none; }
 
 /* Small menu. */
@@ -575,53 +568,6 @@ a {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
-.site-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  width: 65%; }
-
-.blog-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  width: 70%; }
-
-.entry-header {
-  background: #248a83;
-  color: #fff;
-  text-transform: uppercase;
-  width: 70%; }
-
-.entry-meta {
-  background: #248a83;
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 60%;
-  font-size: 0.8rem; }
-
 .sticky {
   display: block; }
 
@@ -636,7 +582,7 @@ a {
   display: inline; }
 
 .page-content,
-.entry-text,
+.entry-content,
 .entry-summary {
   margin: 1.5rem 0 0; }
 
@@ -645,10 +591,6 @@ a {
   margin: 0 0 1.5rem; }
 
 /* Asides */
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none; }
-
 /* Comments */
 .comment-content a {
   word-wrap: break-word; }
@@ -656,14 +598,20 @@ a {
 .bypostauthor {
   display: block; }
 
-.site-footer {
-  background-image: url(../../../content-folder/dark-wood.png);
-  height: 320px; }
-
-.footer-text {
+/* Added */
+.blog {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: 70%; }
 
 /*--------------------------------------------------------------
 # Media
