@@ -12,12 +12,12 @@
 }
 
 // 70% width
-@mixin width70{
+@mixin width70 {
 	width: 70%;
 }
 
 // Flex center
-@mixin flex-center{
+@mixin flex-center {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
@@ -25,16 +25,21 @@
 }
 
 // Flex start
-@mixin flex-start{
+@mixin flex-start {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
 }
 
-// Green-bg and white-color labels
-@mixin label-blocks{
+// Green bg and white color labels
+@mixin label-blocks {
 	background: #248a83;
 	color: #fff;
 	text-transform: uppercase;
+}
+
+// Green color
+@mixin green {
+	color: #248a83;
 }

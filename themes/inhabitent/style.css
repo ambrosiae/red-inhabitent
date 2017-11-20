@@ -427,40 +427,82 @@ a {
     outline: 0; }
 
 /* Menus */
-.main-navigation {
+.site {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto; }
+
+.site-header {
+  width: 70%;
   clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8)));
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  top: 0px;
+  padding: 0.8rem; }
+  .site-header .header-logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: url(Applications/MAMP/htdocs/inhabitent/content-folder/images/logos/inhabitent-logo-tent.svg);
+    height: 30px;
+    width: 50px;
+    z-index: 200; }
+  .site-header .menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+  .site-header .menu-item {
+    padding-left: 1.5rem; }
+  .site-header ul {
     display: none;
     list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
+    margin: auto; }
+    .site-header ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
       position: absolute;
       top: 1.5rem;
       left: -999rem;
       z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
+      .site-header ul ul ul {
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
+      .site-header ul ul a {
         width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
+    .site-header ul li:hover > ul,
+    .site-header ul li.focus > ul {
       left: auto; }
-  .main-navigation li {
-    float: left;
+  .site-header li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     position: relative; }
-  .main-navigation a {
-    display: block;
+  .site-header a {
+    color: #248a83;
+    text-transform: uppercase;
     text-decoration: none; }
 
 /* Small menu. */
