@@ -50,10 +50,10 @@
 /* Added */
 
 .blog{
-	@include flex-center;
 	@include width70;
 }
 
-.entry-title{
-	
+
+.entry-title a{
+	@include label-blocks;
 }

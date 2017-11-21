@@ -642,18 +642,14 @@ a {
 
 /* Added */
 .blog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
   width: 70%; }
+
+.entry-title a {
+  background: #248a83;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 0.5rem; }
 
 /*--------------------------------------------------------------
 # Media
