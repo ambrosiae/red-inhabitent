@@ -16,9 +16,6 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-<iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=%201490%20W%20Broadway%20Vancouver%2C%20BC%20V6H%201H5&key=AIzaSyCpeustnKGv8yH21hROE8qgS-H_sJPdAwg" allowfullscreen></iframe>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -2,4 +2,80 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+/* FRONT PAGE */
+
+/* JOURNAL */
+
+/* SHOP */
+
+.archive {
+
+
+  //.blog-post{
+    //   @include width70;
+  // }
+
+  .product-type-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .product-type {
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    
+    a{
+      @include green;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+  
+  .all-items {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .entry-title {
+    display: flex;
+
+    a{
+      color: black;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 300;
+      height: 100%;
+    }
+  }
+  
+  .item-container {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 24%;
+    flex-shrink: 250px 250px 250px 250px;
+    padding: 0rem 1rem;
+  }
+  
+  .product-image {
+    img{
+      height: 250px;
+      width: auto;
+      background-size: cover;
+    }
+  }
+  
+  .entry-meta {
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    margin-top: -30px;
+    color: #fff;
+  }
+  
+  .entry-content {
+    
+  }
+  
+}

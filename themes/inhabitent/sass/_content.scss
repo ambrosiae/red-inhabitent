@@ -50,10 +50,51 @@
 /* Added */
 
 .blog{
+
+.blog-post{
 	@include width70;
 }
 
+#content{
+	margin-top: 60px;
+}
 
-.entry-title a{
-	@include label-blocks;
+.article{
+	position: relative;
+}
+
+.entry-header{
+	display: inline-flex;
+	flex-flow: column wrap;
+
+	.entry-title {
+		position: absolute;
+		margin-top: 50px;
+		word-wrap: wrap;
+		a{
+			@include label-blocks;
+			font-size: 2rem;
+			word-wrap: wrap;			
+		}
+	}
+
+	.blog-image {
+		width: inherit;
+		img{
+		background-size: cover;
+		
+		}
+	}
+
+	.entry-meta {
+		// justify-content: flex-end;
+		// align-items: flex-end;
+		margin-top: -30px;
+		color: #fff;
+		}
+}
+
+.entry-content {
+}
+
 }
