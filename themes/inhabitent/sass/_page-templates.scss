@@ -2,26 +2,94 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* SIDEBAR */
+
+#primary {
+  width: 75%;
+}
+#secondary {
+  width: auto;
+  border-left: 1px solid #e4e4e4;
+}
+
+
 /* FRONT PAGE */
+
+.site, .site-content {
+  width: 100vw;
+  height: auto;
+}
+
+.home {
+  display: flex;
+  @include flex-center;
+
+  .site-header {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    position: absolute;
+    a {
+      color: #fff;
+    }
+  }
+
+  .home-image {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../content-folder/images/home-hero.jpg');
+
+    .home-logo{
+    height: 280px;
+    width: 280px;
+    }
+  }
+
+  .shop-front {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-type {
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    
+    a{
+      @include green;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+.all-items {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+.item-container {
+
+}
+
+}
+
 
 /* JOURNAL */
 
 /* SHOP */
 
 .archive {
-
-
-  //.blog-post{
-    //   @include width70;
-  // }
-
   .product-type-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    
   }
+
   .product-type {
     justify-content: center;
     align-items: center;

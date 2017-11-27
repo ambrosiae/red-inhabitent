@@ -7,24 +7,38 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="site">
+    <!-- div id="primary" -->
 		<main id="main" class="site-main" role="main">
+
+    <div class="home-image">
+    <img src="<?php echo get_template_directory_uri() . '/content-folder/images/logos/inhabitent-logo-full.svg'?>" class="home-logo" alt="inhabitent camping logo">
+</div>
 
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+          <!-- <h1 class="page-title screen-reader-text"><?php
+          // single_post_title();
+          ?></h1> -->
 				</header>
-			<?php endif; ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-			<i class="fa fa-user" aria-hidden="true"></a>
-
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
+      <?php endif; ?>
+      
+			<!-- <?php /* Start the Loop */ ?>
+      <?php 
+      // while (
+        // have_posts()
+        // ):
+        // the_post();
+        ?>
+        <?php
+        // get_template_part( 'template-parts/content' );
+        ?>
+        <i class="fa fa-user" aria-hidden="true"></i>
+      <?php
+    // endwhile;
+    ?> -->
 
 			<?php the_posts_navigation(); ?>
 
@@ -34,17 +48,16 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+        </div><!--blog-image-->
+  </main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
 
-
+<section class="all-items">
 
 <?php
-		$args = array('numberposts' => '5', 'order' => 'ASC');
-		
+		$args = array('numberposts' => '3', 'order' => 'DES');
     $product_posts = get_posts($args);?>
             <?php foreach ($product_posts as $post) : setup_postdata($post); ?>
 								
@@ -55,10 +68,10 @@ get_header(); ?>
                         <div class="entry-meta">
             <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
         </div><!-- .entry-meta -->
-
 						<?php endforeach; wp_reset_postdata(); ?>
-						
-						<section class="product-info container">
+			      </section>
+			
+						<section class="shop-front container">
             <h2>Shop Stuff</h2>
             <?php
                $terms = get_terms( array(
@@ -67,12 +80,10 @@ get_header(); ?>
                ) );
                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
             ?>
-               <div class="product-type-blocks">
-
                   <?php foreach ( $terms as $term ) : ?>
 
-                     <div class="product-type-block-wrapper">
-                        <img src="<?php echo get_template_directory_uri() . '/images/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
+                     <div class="product-type">
+                         <img src="<?php echo get_template_directory_uri() . '/content-folder/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
                         <p><?php echo $term->description; ?></p>
                         <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
                      </div>
@@ -83,3 +94,5 @@ get_header(); ?>
                
             <?php endif; ?>
          </section>
+
+         <?php get_footer(); ?>

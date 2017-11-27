@@ -11,7 +11,7 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="footer-text">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+				<img src="<?php echo get_template_directory_uri() . '/content-folder/images/dark-wood@2x.png'?>" class="footer-bg" alt="inhabitent camping background">
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
