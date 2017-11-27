@@ -830,6 +830,24 @@ object {
     height: 280px;
     width: 280px;
     background-size: cover; }
+  .home .shop-section {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    flex-flow: column wrap; }
+    .home .shop-section h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 300; }
   .home .shop-front {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -845,31 +863,47 @@ object {
         -ms-flex-align: center;
             align-items: center; }
   .home .product-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0rem 2rem; }
+    margin: 1rem;
+    max-width: 250px; }
+    .home .product-type img {
+      width: 75px;
+      height: 75px; }
     .home .product-type a {
       color: #248a83;
       text-transform: uppercase;
       text-decoration: none; }
   .home .all-items {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: auto;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    justify-content: center;
     -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
-  .home .item-container .item-container {
+        align-content: center; }
+  .home .item-container {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -877,7 +911,7 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    padding: 0rem 1rem; }
+    width: 30%; }
 
 /* JOURNAL */
 /* SHOP */

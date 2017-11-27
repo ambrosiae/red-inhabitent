@@ -49,19 +49,37 @@
   background-size: cover;
   // background: url('../../content-folder/images/logos/inhabitent-logo-full.svg');
 }
+  .shop-section {
+    @include width70;
+    @include flex-center;
+    flex-flow: column wrap;
 
+  h2{
+    text-align: center;    
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  }
   .shop-front {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap;    
     justify-content: center;
     align-items: center;
   }
 
   .product-type {
+    display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 0rem 2rem;
-    
+    margin: 1rem;
+    max-width: 250px;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+
     a{
       @include green;
       text-transform: uppercase;
@@ -70,19 +88,18 @@
   }
 
 .all-items {
-  display: inline-flex;
+  @include width70;
+  @include flex-center;  
+  flex-flow: row wrap;  
   justify-content: center;
   align-content: center;
-  flex-flow: row wrap;
 }
 
-.item-container {
   .item-container {
     display: inline-flex;
     flex-flow: column wrap;
-    padding: 0rem 1rem;
+    width: 30%;
   }
-}
 
 }
 
