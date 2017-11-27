@@ -16,8 +16,9 @@
 /* FRONT PAGE */
 
 .site, .site-content {
+  display: flex;
   width: 100vw;
-  height: auto;
+  height: 100vh;
 }
 
 .home {
@@ -34,16 +35,20 @@
 
   .home-image {
     display: flex;
+    width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-size: cover;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../content-folder/images/home-hero.jpg');
-
-    .home-logo{
-    height: 280px;
-    width: 280px;
-    }
   }
+
+.home-logo {
+  height: 280px;
+  width: 280px;
+  background-size: cover;
+  // background: url('../../content-folder/images/logos/inhabitent-logo-full.svg');
+}
 
   .shop-front {
     display: flex;
@@ -65,18 +70,21 @@
   }
 
 .all-items {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
 }
 
 .item-container {
-
+  .item-container {
+    display: inline-flex;
+    flex-flow: column wrap;
+    padding: 0rem 1rem;
+  }
 }
 
 }
-
 
 /* JOURNAL */
 
@@ -146,4 +154,12 @@
     
   }
   
+}
+
+/* CONTACT */
+
+.site, .site-content {
+  display: inline-flex;
+  width: auto;
+  height: auto;
 }

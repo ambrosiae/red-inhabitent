@@ -52,26 +52,8 @@ get_header(); ?>
   </main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 
-<section class="all-items">
-
-<?php
-		$args = array('numberposts' => '3', 'order' => 'DES');
-    $product_posts = get_posts($args);?>
-            <?php foreach ($product_posts as $post) : setup_postdata($post); ?>
-								
-						<?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail( 'medium' ); ?>
-        <?php endif; ?>
-        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        <div class="entry-meta">
-            <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-        </div><!-- .entry-meta -->
-						<?php endforeach; wp_reset_postdata(); ?>
-			      </section>
-			
-						<section class="shop-front container">
+  <section class="shop-front container">
             <h2>Shop Stuff</h2>
             <?php
                $terms = get_terms( array(
@@ -89,10 +71,27 @@ get_header(); ?>
                      </div>
 
                   <?php endforeach; ?>
-
-               </div>
                
             <?php endif; ?>
          </section>
+
+<section class="all-items">
+
+<?php
+		$args = array('numberposts' => '3', 'order' => 'DES');
+    $product_posts = get_posts($args);?>
+            <?php foreach ($product_posts as $post) : setup_postdata($post); ?>
+            <div class="item-container">
+
+						<?php if ( has_post_thumbnail() ) : ?>
+            <?php the_post_thumbnail( 'medium' ); ?>
+        <?php endif; ?>
+        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                        <div class="entry-meta">
+            <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
+        </div><!-- .entry-meta -->
+      </div>
+						<?php endforeach; wp_reset_postdata(); ?>
+			      </section>
 
          <?php get_footer(); ?>
