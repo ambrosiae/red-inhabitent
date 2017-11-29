@@ -12,7 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather" rel="stylesheet">
+		
 	<?php wp_head(); ?>
 	</head>
 
@@ -30,8 +31,9 @@
 				<div class="header-logo"></div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+	
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 

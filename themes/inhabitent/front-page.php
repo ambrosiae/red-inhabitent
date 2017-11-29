@@ -67,7 +67,7 @@ get_header(); ?>
 
                     <div class="product-type">
                         <img src="<?php echo get_template_directory_uri() . '/content-folder/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
-                      <p><?php echo $term->description; ?> Description description description description description description</p>
+                      <p><?php echo $term->description; ?> Description 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0</p>
                       <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
                     </div>
 
@@ -90,7 +90,7 @@ get_header(); ?>
           <?php the_post_thumbnail( 'medium' ); ?>
       <?php endif; ?>
       <div class="entry-meta">
-          <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
+          <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
       </div><!-- .entry-meta -->
       <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
