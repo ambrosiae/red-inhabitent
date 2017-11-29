@@ -38,7 +38,7 @@ a {
 }
 
 .site-header {
-	@include width70;	
+	width: 100%;	
 	clear: both;
 	display: inline-flex;
 	justify-content: flex-end;
@@ -48,82 +48,54 @@ a {
 	top: 0px;
 	padding: 0.8rem;
 	z-index: 100;	
+	top: 50px;
+
+	i{
+		@include green;
+	}
 
 .header-logo {
+	align-items: flex-start;
 	justify-content: flex-start;
-	background: url(Applications/MAMP/htdocs/inhabitent/content-folder/images/logos/inhabitent-logo-tent.svg);
-	height: 30px;
+	background: url('../../content-folder/images/logos/inhabitent-logo-tent.svg');
+	height: 35px;
 	width: 50px;
 	z-index: 200;
 }
 
-	.menu {
-		display: inline-flex;
+	ul{
+		display: flex;
+		justify-content: flex-end;
 		flex-flow: row wrap;
 	}
-
 	.menu-item {
 		padding-left: 1.5rem;
+		width: 100px;
 	}
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: auto;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		flex-flow: row wrap;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
 	a {
 		@include green;
 		text-transform: uppercase;		
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
+	li {
+		list-style-type: none;
 	}
+
+	.nav-toggle {
+		@include green;
+		box-shadow: none;
+		background: none;
+		border: none;
+	}
+
+	.search-field {
+		text-transform: uppercase;
+		border: none;
+		background: transparent;
+	}
+
 }
 
 /* Small menu. */

@@ -33,10 +33,15 @@ h2{
   .site-header {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     position: absolute;
-    top: 50px;
     a {
+      font-family: 'Lato', 'sans-serif';      
       color: #fff;
     }
+
+    a:hover{
+      color: #f0e4d1;
+    }
+
   }
   
   .home-image {
@@ -54,6 +59,11 @@ h2{
     width: 280px;
     background-size: cover;
     // background: url('../../content-folder/images/logos/inhabitent-logo-full.svg');
+  }
+
+  input[type="search"] {
+    color: #f0e4d1;
+    border: none;
   }
   
   /* FRONT: SHOP SECTION */
@@ -311,17 +321,23 @@ h2{
   
   .page-template-about {
     
-    .site, .site-content, .content-area, .site-main {
-      display: flex;
-      flex-flow: column wrap;
+    #primary {
+      width: 100%;
     }
-    
+
     .site-header {
+      z-index: 500;
       background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
       position: absolute;
       a {
+        font-family: 'Lato', 'sans-serif';      
         color: #fff;
       }
+  
+      a:hover{
+        color: #f0e4d1;
+      }
+  
     }
     
     .about-hero-image {
@@ -336,6 +352,12 @@ h2{
         text-transform: uppercase;
         color: #fff;
         font-size: 3rem;
+        font-family: 'Lato', 'sans-serif';
+      }
+
+      .about-container {
+        @include flex-center;
+        width: 50%;
       }
     }
   }

@@ -63,3 +63,21 @@ $hero_css = ".page-template-about .entry-header {
 wp_add_inline_style('tent-style', $hero_css);
 }
 add_action('wp_enqueue_scripts', 'inhabitent_dynamic_css');
+
+
+add_filter( 'get_the_archive_title', 'inhabitent_filter_archive_title');
+
+
+function inhabitent_filter_archive_title( $title ) {
+
+    if( is_post_type_archive('product') ) {
+        $title = 'Shop Stuff';
+		}
+		
+		elseif(is_tax('product-type')){
+				$title = single_term_title();
+		}
+
+    return $title;
+
+};

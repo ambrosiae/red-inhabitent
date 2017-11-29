@@ -20,6 +20,7 @@ get_header(); ?>
 			<p class="price"><?php echo CFS()->get('price')?></p>
 		</header><!-- .entry-header -->
 		<div class="entry-content">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 			<?php the_content(); ?>
 

@@ -33,7 +33,6 @@ get_header(); ?>
 
 								<div class="product-type">
 					
-									<p><?php echo $term->description; ?></p>
 									<p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?></a></p>
 								</div>
 

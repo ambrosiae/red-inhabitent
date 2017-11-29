@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-	<!-- <div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main"> -->
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <header class="about-hero-image">
@@ -16,6 +16,7 @@ get_header(); ?>
           <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 </div>
 </header>
+<section class="about-container">
   <div class="entry-content"> 
     <h2>Our Story</h2>
 <?php echo CFS()->get('about_our_story'); ?>
@@ -23,6 +24,7 @@ get_header(); ?>
 <h2>Our Team</h2>
 <?php echo CFS()->get('about_our_team'); ?>
 </div>
+</section>
 </article>
 </main>
 </div>

@@ -413,7 +413,9 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  text-transform: uppercase;
+  font-weight: 300; }
 
 textarea {
   padding-left: 3px;
@@ -456,7 +458,7 @@ a {
   margin: auto; }
 
 .site-header {
-  width: 70%;
+  width: 100%;
   clear: both;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -472,53 +474,51 @@ a {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   top: 0px;
   padding: 0.8rem;
-  z-index: 100; }
+  z-index: 100;
+  top: 50px; }
+  .site-header i {
+    color: #248a83; }
   .site-header .header-logo {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    background: url(Applications/MAMP/htdocs/inhabitent/content-folder/images/logos/inhabitent-logo-tent.svg);
-    height: 30px;
+    background: url("../../content-folder/images/logos/inhabitent-logo-tent.svg");
+    height: 35px;
     width: 50px;
     z-index: 200; }
-  .site-header .menu {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+  .site-header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; }
   .site-header .menu-item {
-    padding-left: 1.5rem; }
-  .site-header ul {
-    display: none;
-    list-style: none;
-    margin: auto; }
-    .site-header ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .site-header ul ul ul {
-        top: 0; }
-      .site-header ul ul a {
-        width: 200px; }
-    .site-header ul li:hover > ul,
-    .site-header ul li.focus > ul {
-      left: auto; }
-  .site-header li {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    position: relative; }
+    padding-left: 1.5rem;
+    width: 100px; }
   .site-header a {
     color: #248a83;
     text-transform: uppercase;
     text-decoration: none; }
+  .site-header li {
+    list-style-type: none; }
+  .site-header .nav-toggle {
+    color: #248a83;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: none;
+    border: none; }
+  .site-header .search-field {
+    text-transform: uppercase;
+    border: none;
+    background: transparent; }
 
 /* Small menu. */
 .menu-toggle,
@@ -814,10 +814,12 @@ h2 {
   .home .site-header {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-    position: absolute;
-    top: 50px; }
+    position: absolute; }
     .home .site-header a {
+      font-family: 'Lato', 'sans-serif';
       color: #fff; }
+    .home .site-header a:hover {
+      color: #f0e4d1; }
   .home .home-image {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -837,6 +839,9 @@ h2 {
     height: 280px;
     width: 280px;
     background-size: cover; }
+  .home input[type="search"] {
+    color: #f0e4d1;
+    border: none; }
   .home .shop-section {
     width: 70%;
     display: -webkit-box;
@@ -1139,21 +1144,19 @@ h2 {
 
 /* CONTACT */
 /* ABOUT */
-.page-template-about .site, .page-template-about .site-content, .page-template-about .content-area, .page-template-about .site-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap; }
+.page-template-about #primary {
+  width: 100%; }
 
 .page-template-about .site-header {
+  z-index: 500;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
   position: absolute; }
   .page-template-about .site-header a {
+    font-family: 'Lato', 'sans-serif';
     color: #fff; }
+  .page-template-about .site-header a:hover {
+    color: #f0e4d1; }
 
 .page-template-about .about-hero-image {
   display: -webkit-box;
@@ -1172,7 +1175,21 @@ h2 {
   .page-template-about .about-hero-image .entry-title {
     text-transform: uppercase;
     color: #fff;
-    font-size: 3rem; }
+    font-size: 3rem;
+    font-family: 'Lato', 'sans-serif'; }
+  .page-template-about .about-hero-image .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    width: 50%; }
 
 .search .site-content {
   display: -webkit-box;
