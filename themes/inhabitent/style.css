@@ -225,6 +225,11 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+* {
+  font-size: 16px;
+  line-height: 1.75rem;
+  font-family: 'Merriweather'; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -442,9 +447,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto; }
 
 .site-header {
@@ -788,23 +793,13 @@ object {
 .site, .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  height: 100vh; }
+  display: flex; }
 
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto; }
+  /*  */ }
   .home .site-header {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
@@ -823,13 +818,17 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-size: cover;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/home-hero.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/home-hero.jpg"); }
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/home-hero.jpg");
+    background-size: cover, cover; }
   .home .home-logo {
     height: 280px;
     width: 280px;
     background-size: cover; }
+  .home h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300; }
   .home .shop-section {
     width: 70%;
     display: -webkit-box;
@@ -839,16 +838,12 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     flex-flow: column wrap; }
-    .home .shop-section h2 {
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 300; }
-  .home .shop-front {
+  .home .all-shop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -856,9 +851,9 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -876,8 +871,10 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1rem;
-    max-width: 250px; }
+    max-width: 280px;
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    padding: 1rem; }
     .home .product-type img {
       width: 75px;
       height: 75px; }
@@ -885,7 +882,12 @@ object {
       color: #248a83;
       text-transform: uppercase;
       text-decoration: none; }
-  .home .all-items {
+    .home .product-type .btn {
+      background: #248a83;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 0.6rem 1rem; }
+  .home .all-items-section {
     width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -894,27 +896,154 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center; }
+    flex-flow: column wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .home .all-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .home .item-container {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    width: 30%; }
+    max-width: 300px; }
+    .home .item-container a {
+      color: #248a83;
+      text-transform: uppercase;
+      text-decoration: none; }
+    .home .item-container .entry-meta {
+      font-size: 0.8rem; }
+  .home .adventure-section {
+    width: 70%; }
+    .home .adventure-section .all-adventure {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .home .adventure-section .adventure-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      width: 50%; }
+    .home .adventure-section .adventure-bottom-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .home .adventure-section .adventure-title {
+      position: absolute;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .home .adventure-section .canoe {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 540px;
+      width: 50%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
+      background-size: cover; }
+    .home .adventure-section .beach {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 250px;
+      width: 540px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
+      background-size: cover; }
+    .home .adventure-section .mountain {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 250px;
+      width: 270px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") center;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") center;
+      background-size: cover;
+      margin: 1rem 1rem 0rem 0rem; }
+    .home .adventure-section .star {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 250px;
+      width: 270px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/night-sky.jpg") center;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/night-sky.jpg") center;
+      background-size: cover;
+      margin: 1rem 0rem 0rem 1rem; }
 
 /* JOURNAL */
 /* SHOP */
+.archive .site, .archive .site-content, .archive .content-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto; }
+
 .archive .product-type-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -987,9 +1116,63 @@ object {
   color: #fff; }
 
 /* CONTACT */
-.site, .site-content {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: auto;
-  height: auto; }
+/* ABOUT */
+.page-template-about .site, .page-template-about .site-content, .page-template-about .content-area, .page-template-about .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap; }
+
+.page-template-about .site-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  position: absolute; }
+  .page-template-about .site-header a {
+    color: #fff; }
+
+.page-template-about .about-hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../content-folder/images/product-photos/weathered-canoes.jpg") bottom;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../content-folder/images/product-photos/weathered-canoes.jpg") bottom;
+  background-size: cover, cover; }
+  .page-template-about .about-hero-image .entry-title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem; }
+
+.search .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 70%; }
+
+.search .page-title {
+  text-transform: uppercase; }
+
+.search .entry-title a {
+  color: #248a83;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem; }

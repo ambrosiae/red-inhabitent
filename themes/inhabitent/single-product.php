@@ -1,6 +1,6 @@
 <?php
 /**
- * Single-product.
+ * The template for displaying all single posts.
  *
  * @package RED_Starter_Theme
  */
@@ -8,33 +8,44 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<?php /* Start the Loop */ ?>
+			<main id="main" class="site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div><?php the_post_thumbnail( 'large' ); ?></div>
+	<?php endif; ?>
+	<div class="single-product">
+		<header>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<p class="price"><?php echo CFS()->get('price')?></p>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
 
-				<?php get_template_part( 'template-parts/content-product' ); ?>
+			<?php the_content(); ?>
 
-			<?php endwhile; ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+					'after'  => '</div>',
+				) );
 
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content-product', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
+				?>
+			<div>
+				<button type="submit" class="single-product-buttons"><i class="fa fa-facebook" aria-hidden="true"></i>Like</button>
+				<button type="submit" class="single-product-buttons"><i class="fa fa-twitter" aria-hidden="true"></i>Tweet</button>
+				<button type="submit" class="single-product-buttons"><i class="fa fa-pinterest" aria-hidden="true"></i>Pin</button>
+			</div>
+			</div><!-- .entry-content -->
+		</div>
+		
+	</article><!-- #post-## -->
+					<?php
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+									comments_template();
+							endif;
+					?>
+			<?php endwhile; // End of the loop. ?>
+			</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

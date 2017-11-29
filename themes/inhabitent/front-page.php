@@ -55,7 +55,7 @@ get_header(); ?>
 
 <section class="shop-section">
     <h2>Shop Stuff</h2>
-        <section class="shop-front">
+        <section class="all-shop">
           <?php
               $terms = get_terms( array(
                   'taxonomy' => 'product-type',
@@ -67,7 +67,7 @@ get_header(); ?>
 
                     <div class="product-type">
                         <img src="<?php echo get_template_directory_uri() . '/content-folder/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
-                      <p><?php echo $term->description; ?> Description description description description description description description</p>
+                      <p><?php echo $term->description; ?> Description description description description description description</p>
                       <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
                     </div>
 
@@ -77,8 +77,9 @@ get_header(); ?>
         </section>
       </section>
 
+<section class="all-items-section">
+<h2>Inhabitent Journal</h2>
 <section class="all-items">
-
 <?php
   $args = array('numberposts' => '3', 'order' => 'DES');
   $product_posts = get_posts($args);?>
@@ -92,9 +93,39 @@ get_header(); ?>
           <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
       </div><!-- .entry-meta -->
       <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                      
+
     </div>
           <?php endforeach; wp_reset_postdata(); ?>
           </section>
+     </section>
+
+   <section class="adventure-section">
+     <h2>Latest Adventures</h2>
+     <div class="all-adventure">
+    <div class="canoe">
+     <div class="adventure-title">
+     <a href="">Getting Back to Nature in a Canoe</a>
+    </div>
+  </div>
+  <section class="adventure-right">
+  <div class="beach">
+     <div class="adventure-title">
+     <a href="">A Night with Friends at the Beach</a>
+    </div>
+    </div>
+    <section class="adventure-bottom-right">
+    <div class="mountain">
+     <div class="adventure-title">
+     <a href="">Taking in the View at Big Mountain</a>
+    </div>
+    </div>
+    <div class="star">
+     <div class="adventure-title">
+     <a href="">Star-Gazing at the Night Sky</a>
+    </div>
+    </div>
+  </section>
+   </section>
+  </section>
 
         <?php get_footer(); ?>
