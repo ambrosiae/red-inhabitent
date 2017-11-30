@@ -425,3 +425,17 @@ h2{
       }
     }
   }
+
+  /* CONTACT */
+  .page-template-default{
+    .site{
+      @include width70;
+      margin-top: 1rem;
+
+      h1{
+        text-transform: uppercase;
+        font-family: 'Lato', 'sans-serif';
+        font-size: 2.2rem;
+      }
+    }
+  }
