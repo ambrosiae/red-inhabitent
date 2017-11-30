@@ -523,7 +523,7 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
     height: 35px;
-    margin-left: 10rem; }
+    margin-left: 15rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -813,6 +813,43 @@ object {
 #secondary {
   width: auto;
   border-left: 1px solid #e4e4e4; }
+  #secondary h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  #secondary .widget_text {
+    padding: 3rem 0rem 0rem 3rem; }
+    #secondary .widget_text .contact-meta a {
+      color: #248a83;
+      text-decoration: none; }
+    #secondary .widget_text .contact-meta i, #secondary .widget_text .contact-meta .fa {
+      color: #404040; }
+    #secondary .widget_text .contact-meta p {
+      color: #404040; }
+    #secondary .widget_text .day-of-week {
+      font-weight: 900; }
+  #secondary .widget_archive {
+    padding: 3rem 0rem 0rem 3rem; }
+    #secondary .widget_archive h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+    #secondary .widget_archive ul {
+      list-style-type: none;
+      margin-left: -40px; }
+      #secondary .widget_archive ul a {
+        color: #248a83;
+        text-decoration: none; }
 
 h2 {
   font-family: 'Lato', 'sans-serif';
