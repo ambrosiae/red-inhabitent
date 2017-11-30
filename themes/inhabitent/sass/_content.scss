@@ -59,8 +59,8 @@
 	margin-top: 60px;
 }
 
-.article{
-	position: relative;
+.site-main{
+	@include flex-center;
 }
 
 .entry-header{
@@ -68,13 +68,21 @@
 	flex-flow: column wrap;
 
 	.entry-title {
+		@include label-blocks;		
 		position: absolute;
 		margin-top: 50px;
 		word-wrap: wrap;
+		width: 35rem;
+		line-height: 3rem;
+		text-align: left;
+		
 		a{
-			@include label-blocks;
+			color: #fff;
+			text-decoration: none;
 			font-size: 2rem;
-			word-wrap: wrap;			
+			word-wrap: wrap;	
+			font-family: 'Lato', 'sans-serif';
+			font-weight: 700;
 		}
 	}
 

@@ -30,12 +30,12 @@
 					?></p>
 				</div> -->
 
-				<a href="<?php home_url('/'); ?>"><img src="<?php echo get_template_directory_uri() . '/content-folder/images/logos/inhabitent-logo-tent.svg' ;?>"></a>
+				<a href="<?php home_url('/'); ?>"><img class="logo-tent" src="<?php echo get_template_directory_uri() . '/content-folder/images/logos/inhabitent-logo-tent.svg' ;?>"></a>
 	
 					<a class="nav-toggle" aria-controls="primary-menu" aria-expanded="true"><?php
 					esc_html( 'Primary Menu' );
 					?></a>
-										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container' => '') ); ?>
 
 					<div><?php get_search_form(); ?></div>
 				</nav><!-- #site-navigation -->

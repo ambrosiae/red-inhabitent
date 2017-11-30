@@ -347,18 +347,19 @@ h2{
       height: 100vh;
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../content-folder/images/product-photos/weathered-canoes.jpg') bottom;
       background-size: cover, cover;
-      
-      .entry-title {
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 3rem;
-        font-family: 'Lato', 'sans-serif';
-      }
+    
+    }
 
-      .about-container {
-        @include flex-center;
-        width: 50%;
-      }
+    .entry-title {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 3rem;
+      font-family: 'Lato', 'sans-serif';
+    }
+
+    .about-container {
+      @include flex-center;
+      width: 50%;
     }
   }
   

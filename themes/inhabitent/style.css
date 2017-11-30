@@ -438,7 +438,6 @@ a {
 
 /* Added */
 *,
-:after,
 :before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
@@ -463,9 +462,6 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -479,9 +475,6 @@ a {
   .site-header i {
     color: #248a83; }
   .site-header .header-logo {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -489,36 +482,48 @@ a {
     height: 35px;
     width: 50px;
     z-index: 200; }
-  .site-header ul {
+  .site-header .menu, .site-header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: 30rem; }
   .site-header .menu-item {
     padding-left: 1.5rem;
     width: 100px; }
   .site-header a {
     color: #248a83;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: 'Lato', 'sans-serif'; }
   .site-header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 100%;
     list-style-type: none; }
   .site-header .nav-toggle {
     color: #248a83;
     -webkit-box-shadow: none;
             box-shadow: none;
     background: none;
-    border: none; }
+    border: none;
+    padding-left: 1.5rem; }
   .site-header .search-field {
     text-transform: uppercase;
     border: none;
     background: transparent; }
+  .site-header .logo-tent {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 35px;
+    margin-left: 10rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -690,8 +695,18 @@ footer, .site-footer, #colophon {
 .blog #content {
   margin-top: 60px; }
 
-.blog .article {
-  position: relative; }
+.blog .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto; }
 
 .blog .entry-header {
   display: -webkit-inline-box;
@@ -702,17 +717,24 @@ footer, .site-footer, #colophon {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap; }
   .blog .entry-header .entry-title {
+    background: #248a83;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.8rem 0.5rem;
     position: absolute;
     margin-top: 50px;
-    word-wrap: wrap; }
+    word-wrap: wrap;
+    width: 35rem;
+    line-height: 3rem;
+    text-align: left; }
     .blog .entry-header .entry-title a {
-      background: #248a83;
       color: #fff;
-      text-transform: uppercase;
       text-decoration: none;
-      padding: 0.8rem 0.5rem;
       font-size: 2rem;
-      word-wrap: wrap; }
+      word-wrap: wrap;
+      font-family: 'Lato', 'sans-serif';
+      font-weight: 700; }
   .blog .entry-header .blog-image {
     width: inherit; }
     .blog .entry-header .blog-image img {
@@ -1172,24 +1194,26 @@ h2 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../content-folder/images/product-photos/weathered-canoes.jpg") bottom;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../content-folder/images/product-photos/weathered-canoes.jpg") bottom;
   background-size: cover, cover; }
-  .page-template-about .about-hero-image .entry-title {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 3rem;
-    font-family: 'Lato', 'sans-serif'; }
-  .page-template-about .about-hero-image .about-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: auto;
-    width: 50%; }
+
+.page-template-about .entry-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Lato', 'sans-serif'; }
+
+.page-template-about .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 50%; }
 
 .search .site-content {
   display: -webkit-box;

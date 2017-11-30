@@ -67,7 +67,7 @@ get_header(); ?>
 
                     <div class="product-type">
                         <img src="<?php echo get_template_directory_uri() . '/content-folder/images/product-type-icons/' . $term->slug; ?>.svg" alt="<?php echo $term->name; ?>" />
-                      <p><?php echo $term->description; ?> Description 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0</p>
+                      <p><?php echo $term->description; ?></p>
                       <p><a href="<?php echo get_term_link( $term ); ?>" class="btn"><?php echo $term->name; ?> Stuff</a></p>
                     </div>
 
