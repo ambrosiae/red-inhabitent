@@ -65,7 +65,6 @@ h2{
 /* FRONT PAGE */
 
 .site, .site-content {
-  display: flex;
 }
 
 .home {  
@@ -156,7 +155,6 @@ h2{
   /* FRONT: JOURNAL SECTION */
   
   .all-items-section {
-    @include width70;
     @include flex-center;  
     flex-flow: column wrap;
     justify-content: space-between;
@@ -198,8 +196,7 @@ h2{
   }
   
   .adventure-section {
-    @include width70;
-    
+    width: 100%;
     .all-adventure {
       display: flex;
       flex-flow: row wrap;
