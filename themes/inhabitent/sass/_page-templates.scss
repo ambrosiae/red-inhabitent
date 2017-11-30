@@ -62,17 +62,13 @@ h2{
   font-weight: 300;
 }
 
-
-
 /* FRONT PAGE */
 
 .site, .site-content {
   display: flex;
 }
 
-.home {
-  display: flex;
-  
+.home {  
   .site-header {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     position: absolute;
@@ -112,7 +108,6 @@ h2{
   /* FRONT: SHOP SECTION */
   
   .shop-section {
-    @include width70;
     @include flex-center;
     flex-flow: column wrap;
     
@@ -425,17 +420,28 @@ h2{
       }
     }
   }
-
+  
   /* CONTACT */
   .page-template-default{
     .site{
       @include width70;
-      margin-top: 1rem;
-
+      color: #000;
+      #primary{
+        padding-right: 4rem;
+        
+      }
       h1{
         text-transform: uppercase;
         font-family: 'Lato', 'sans-serif';
         font-size: 2.2rem;
+      }
+      h2{
+        font-family: 'Lato', 'sans-serif';
+        font-weight: 700;
+        font-size: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        letter-spacing: 0.1rem;                
       }
     }
   }
