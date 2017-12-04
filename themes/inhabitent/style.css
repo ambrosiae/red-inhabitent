@@ -322,9 +322,6 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul, ol {
-  margin: 0 0 1.5rem 3rem; }
-
 ul {
   list-style: disc; }
 
@@ -470,8 +467,7 @@ a {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   top: 0px;
   padding: 0.8rem;
-  z-index: 100;
-  top: 50px; }
+  z-index: 100; }
   .site-header i {
     color: #248a83; }
   .site-header .header-logo {
@@ -523,7 +519,7 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
     height: 35px;
-    margin-left: 15rem; }
+    margin-left: 18rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -637,22 +633,122 @@ footer, .site-footer, #colophon {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%; }
-
-.footer-bg {
-  text-align: left;
-  height: 350px;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+  width: 100%;
+  margin-top: 5rem; }
+  footer .footer-all, .site-footer .footer-all, #colophon .footer-all {
+    height: 350px;
+    width: 100vw;
+    background: url("../../content-folder/images/dark-wood@2x.png"); }
+    footer .footer-all .footer-text, .site-footer .footer-all .footer-text, #colophon .footer-all .footer-text {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: auto;
+      width: 70%;
+      padding-top: 3rem;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-  .footer-bg a {
-    text-transform: uppercase;
-    font-size: 0.5rem; }
+          flex-flow: row wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: space-between;
+          -ms-flex-align: space-between;
+              align-items: space-between; }
+      footer .footer-all .footer-text .footer-contact-hours-logo, .site-footer .footer-all .footer-text .footer-contact-hours-logo, #colophon .footer-all .footer-text .footer-contact-hours-logo {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+      footer .footer-all .footer-text .row, .site-footer .footer-all .footer-text .row, #colophon .footer-all .footer-text .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        padding: 0.5rem 0rem 0.5rem 0rem; }
+      footer .footer-all .footer-text span, .site-footer .footer-all .footer-text span, #colophon .footer-all .footer-text span {
+        font-weight: 700; }
+      footer .footer-all .footer-text .footer-contact, .site-footer .footer-all .footer-text .footer-contact, #colophon .footer-all .footer-text .footer-contact {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        color: #fff; }
+        footer .footer-all .footer-text .footer-contact a, .site-footer .footer-all .footer-text .footer-contact a, #colophon .footer-all .footer-text .footer-contact a {
+          color: #fff;
+          text-decoration: none; }
+        footer .footer-all .footer-text .footer-contact i, .site-footer .footer-all .footer-text .footer-contact i, #colophon .footer-all .footer-text .footer-contact i {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+          width: 30px;
+          padding-top: 5px; }
+      footer .footer-all .footer-text .footer-hours, .site-footer .footer-all .footer-text .footer-hours, #colophon .footer-all .footer-text .footer-hours {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        color: #fff;
+        line-height: 0rem;
+        margin-left: -15rem; }
+        footer .footer-all .footer-text .footer-hours p, .site-footer .footer-all .footer-text .footer-hours p, #colophon .footer-all .footer-text .footer-hours p {
+          margin-bottom: 0px; }
+      footer .footer-all .footer-text h2, .site-footer .footer-all .footer-text h2, #colophon .footer-all .footer-text h2 {
+        color: #d99054;
+        text-transform: uppercase;
+        font-family: 'Lato', 'sans-serif';
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        text-align: left; }
+      footer .footer-all .footer-text .hours-margin, .site-footer .footer-all .footer-text .hours-margin, #colophon .footer-all .footer-text .hours-margin {
+        margin-bottom: 0.5rem; }
+    footer .footer-all .footer-logo, .site-footer .footer-all .footer-logo, #colophon .footer-all .footer-logo {
+      background-size: contain;
+      background-position: center;
+      height: auto;
+      width: 300px;
+      margin-top: -100px; }
+    footer .footer-all .footer-copyright, .site-footer .footer-all .footer-copyright, #colophon .footer-all .footer-copyright {
+      text-transform: uppercase;
+      color: #fff;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 1rem;
+      margin-top: 3rem; }
 
 /*--------------------------------------------------------------
 # Content
@@ -689,34 +785,34 @@ footer, .site-footer, #colophon {
   display: block; }
 
 /* Added */
-.blog .blog-post {
-  width: 70%; }
-
-.blog #content {
-  margin-top: 60px; }
-
-.blog .site-main {
+/* Journal */
+.blog .site-content, .single-post .site-content {
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.blog #content, .single-post #content {
+  margin-top: 60px; }
+
+.blog .blog-post, .single-post .blog-post {
+  padding: 3rem 3rem; }
+
+.blog .entry-header, .single-post .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto; }
-
-.blog .entry-header {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap; }
-  .blog .entry-header .entry-title {
+  margin-bottom: 8rem; }
+  .blog .entry-header .entry-title, .single-post .entry-header .entry-title {
     background: #248a83;
     color: #fff;
     text-transform: uppercase;
@@ -727,21 +823,44 @@ footer, .site-footer, #colophon {
     word-wrap: wrap;
     width: 35rem;
     line-height: 3rem;
-    text-align: left; }
-    .blog .entry-header .entry-title a {
+    text-align: left;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 2rem;
+    font-weight: 700; }
+    .blog .entry-header .entry-title a, .single-post .entry-header .entry-title a {
       color: #fff;
       text-decoration: none;
       font-size: 2rem;
       word-wrap: wrap;
       font-family: 'Lato', 'sans-serif';
       font-weight: 700; }
-  .blog .entry-header .blog-image {
-    width: inherit; }
-    .blog .entry-header .blog-image img {
-      background-size: cover; }
-  .blog .entry-header .entry-meta {
-    margin-top: -30px;
+  .blog .entry-header .blog-image img, .single-post .entry-header .blog-image img {
+    width: 100%; }
+  .blog .entry-header .entry-meta, .single-post .entry-header .entry-meta {
+    position: absolute;
+    bottom: 1px;
+    right: 0px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #248a83;
     color: #fff; }
+    .blog .entry-header .entry-meta .entry-date, .blog .entry-header .entry-meta .comments-link, .blog .entry-header .entry-meta .byline, .blog .entry-header .entry-meta .author, .single-post .entry-header .entry-meta .entry-date, .single-post .entry-header .entry-meta .comments-link, .single-post .entry-header .entry-meta .byline, .single-post .entry-header .entry-meta .author {
+      font-family: 'Lato', 'sans-serif'; }
+      .blog .entry-header .entry-meta .entry-date a, .blog .entry-header .entry-meta .comments-link a, .blog .entry-header .entry-meta .byline a, .blog .entry-header .entry-meta .author a, .single-post .entry-header .entry-meta .entry-date a, .single-post .entry-header .entry-meta .comments-link a, .single-post .entry-header .entry-meta .byline a, .single-post .entry-header .entry-meta .author a {
+        font-family: 'Lato', 'sans-serif';
+        color: #fff;
+        text-decoration: none; }
+
+.blog .entry-content .BodyA, .single-post .entry-content .BodyA {
+  line-height: 1.75rem; }
+
+.single-post .nav-previous {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Media
@@ -808,10 +927,11 @@ object {
 --------------------------------------------------------------*/
 /* SIDEBAR */
 #primary {
-  width: 75%; }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%; }
 
 #secondary {
-  width: auto;
   border-left: 1px solid #e4e4e4; }
   #secondary h2 {
     font-size: 1.5rem;
@@ -823,7 +943,7 @@ object {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   #secondary .widget_text {
-    padding: 3rem 0rem 0rem 3rem; }
+    margin: 3rem 0rem 0rem 3rem; }
     #secondary .widget_text .contact-meta a {
       color: #248a83;
       text-decoration: none; }
@@ -833,23 +953,21 @@ object {
       color: #404040; }
     #secondary .widget_text .day-of-week {
       font-weight: 900; }
-  #secondary .widget_archive {
-    padding: 3rem 0rem 0rem 3rem; }
-    #secondary .widget_archive h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; }
-    #secondary .widget_archive ul {
-      list-style-type: none;
-      margin-left: -40px; }
-      #secondary .widget_archive ul a {
-        color: #248a83;
-        text-decoration: none; }
+  #secondary .widget_archive h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 3rem 0rem 0rem 3rem; }
+  #secondary .widget_archive ul {
+    list-style-type: none; }
+    #secondary .widget_archive ul a {
+      color: #248a83;
+      text-decoration: none; }
 
 h2 {
   font-family: 'Lato', 'sans-serif';
@@ -1063,6 +1181,12 @@ h2 {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
       background-size: cover; }
+      .home .adventure-section .canoe a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 3rem; }
+      .home .adventure-section .canoe a:hover {
+        color: #f0e4d1; }
     .home .adventure-section .beach {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1072,7 +1196,7 @@ h2 {
           -ms-flex-pack: center;
               justify-content: center;
       height: 250px;
-      width: 540px;
+      width: 100%;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
       background-size: cover; }
@@ -1118,7 +1242,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto; }
+  margin: auto;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
 
 .archive .product-type-container {
   display: -webkit-box;
@@ -1183,8 +1309,6 @@ h2 {
   padding: 0rem 1rem; }
 
 .archive .product-image img {
-  height: 250px;
-  width: auto;
   background-size: cover; }
 
 .archive .entry-meta {
@@ -1273,6 +1397,14 @@ h2 {
   color: #000; }
   .page-template-default .site #primary {
     padding-right: 4rem; }
+  .page-template-default .site .site-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
   .page-template-default .site h1 {
     text-transform: uppercase;
     font-family: 'Lato', 'sans-serif';

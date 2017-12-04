@@ -49,60 +49,88 @@
 
 /* Added */
 
-.blog{
+/* Journal */
 
-.blog-post{
-	@include width70;
-}
-
-#content{
-	margin-top: 60px;
-}
-
-.site-main{
-	@include flex-center;
-}
-
-.entry-header{
-	display: inline-flex;
-	flex-flow: column wrap;
-
-	.entry-title {
-		@include label-blocks;		
-		position: absolute;
-		margin-top: 50px;
-		word-wrap: wrap;
-		width: 35rem;
-		line-height: 3rem;
-		text-align: left;
+.blog, .single-post{
+	
+	.site-content{
+		@include width70;
+		display: flex;
+		flex-flow: row wrap;	
+	}
+	
+	#content{
+		margin-top: 60px;
+	}
+	
+	.blog-post{
+		padding: 3rem 3rem;
+	}
+	
+	.entry-header{
+		display: flex;
+		position: relative;
+		flex-flow: column wrap;
+		margin-bottom: 8rem;		
 		
-		a{
-			color: #fff;
-			text-decoration: none;
-			font-size: 2rem;
-			word-wrap: wrap;	
+		.entry-title {
+			@include label-blocks;		
+			position: absolute;
+			margin-top: 50px;
+			word-wrap: wrap;
+			width: 35rem;
+			line-height: 3rem;
+			text-align: left;
 			font-family: 'Lato', 'sans-serif';
+			font-size: 2rem;
 			font-weight: 700;
+			
+			a{
+				color: #fff;
+				text-decoration: none;
+				font-size: 2rem;
+				word-wrap: wrap;	
+				font-family: 'Lato', 'sans-serif';
+				font-weight: 700;
+			}
 		}
-	}
-
-	.blog-image {
-		width: inherit;
-		img{
-		background-size: cover;
 		
+		.blog-image {
+			img{
+				width: 100%;				
+			}
+		}
+		
+		.entry-meta {
+			position: absolute;			
+			bottom: 1px;
+			right: 0px;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			background-color: #248a83;
+			color: #fff;
+			.entry-date, .comments-link, .byline, .author{
+				font-family: 'Lato', 'sans-serif';			
+				a{
+					font-family: 'Lato', 'sans-serif';
+					color: #fff;
+					text-decoration: none;						
+				}
+			}
 		}
 	}
-
-	.entry-meta {
-		// justify-content: flex-end;
-		// align-items: flex-end;
-		margin-top: -30px;
-		color: #fff;
+	
+	.entry-content {
+		.BodyA{
+			line-height: 1.75rem;
 		}
+	}
+	
 }
 
-.entry-content {
-}
-
+.single-post{
+	.nav-previous{
+		display: none;
+	}
 }

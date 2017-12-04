@@ -3,17 +3,100 @@ footer, .site-footer, #colophon{
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-}
+  margin-top: 5rem;
+  
+  .footer-all {
+    height: 350px;
+    width: 100vw;
+    background: url('../../content-folder/images/dark-wood@2x.png');
+    
+    .footer-text{
+      @include flex-center;
+      @include width70;
+      padding-top: 3rem;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: space-between;
+      
+      .footer-contact-hours-logo{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        
+      }
+      
+      .row {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+      }
+      
+      span{
+        font-weight: 700;
+      }
+      
+      .footer-contact{
+        display: flex;
+        flex-flow: column wrap;
+        color: #fff;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+        i{
+          display: flex;
+          flex-flow: row wrap;
+          width: 30px;
+          padding-top: 5px;
+        }
+        
+      }
+      
+      .footer-hours{
+        display: flex;
+        flex-flow: column wrap;
+        color: #fff;
+        line-height: 0rem;
+        margin-left: -15rem;
+        p
+        {
+          margin-bottom: 0px;
+        }
+      }
 
-.footer-bg {
-  text-align: left;  
-  height: 350px;
-  width: 100vw;
-  display: flex;
-  flex-flow: row wrap;
-
-  a {
-    text-transform: uppercase;
-    font-size: 0.5rem;
+      h2{
+        color: #d99054;
+        text-transform: uppercase;
+        font-family: 'Lato', 'sans-serif';
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        text-align: left;
+      }
+      .hours-margin{
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+      .footer-logo{
+        background-size: contain;
+        background-position: center;
+        height: auto;
+        width: 300px;  
+        margin-top: -100px;
+      }
+    
+    .footer-copyright{
+      text-transform: uppercase;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 1rem;
+      margin-top: 3rem;
+    }
   }
 }

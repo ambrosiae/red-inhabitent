@@ -7,11 +7,15 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+<article class="blog-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<header class="entry-header">
+
+<div class="blog-image">
 		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
+		<?php the_post_thumbnail( 'large' ); ?>
+	<?php endif; ?>
+</div>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

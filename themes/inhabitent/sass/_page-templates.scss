@@ -5,10 +5,9 @@
 /* SIDEBAR */
 
 #primary {
-  width: 75%;
+  flex: 0 1 75%;
 }
 #secondary {
-  width: auto;
   border-left: 1px solid #e4e4e4;
   h2{
     font-size: 1.5rem;
@@ -17,7 +16,7 @@
     justify-content: flex-start;
   }
   .widget_text {
-    padding: 3rem 0rem 0rem 3rem;
+    margin: 3rem 0rem 0rem 3rem;
     .contact-meta {
       a {
         @include green;
@@ -35,16 +34,15 @@
     }
   }
   .widget_archive {
-    padding: 3rem 0rem 0rem 3rem;    
     h2{
       font-size: 1.5rem;
       font-weight: 700;
       display: flex;    
       justify-content: flex-start;
+      margin: 3rem 0rem 0rem 3rem;
     }
     ul{
       list-style-type: none;
-      margin-left: -40px;
       
       a{
         @include green;
@@ -230,6 +228,14 @@ h2{
       width: 50%;
       background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/canoe-girl.jpg') center;
       background-size: cover;
+      a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 3rem;
+      }
+      a:hover{
+        color: #f0e4d1;
+      }
     }
     
     .beach {
@@ -237,7 +243,7 @@ h2{
       position: relative;
       justify-content: center;
       height: 250px;
-      width: 540px;
+      width: 100%;
       background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/beach-bonfire.jpg') center;
       background-size: cover;  
     }
@@ -277,6 +283,7 @@ h2{
   
   .site, .site-content, .content-area{
     @include flex-center;
+    flex-flow: row wrap;
   }
   
   .product-type-container {
@@ -325,8 +332,8 @@ h2{
   
   .product-image {
     img{
-      height: 250px;
-      width: auto;
+      // height: 250px;
+      // width: 250px;
       background-size: cover;
     }
   }
@@ -425,8 +432,12 @@ h2{
       color: #000;
       #primary{
         padding-right: 4rem;
-        
       }
+
+    .site-content{
+      display: flex;
+      flex-flow: row wrap;
+    }
       h1{
         text-transform: uppercase;
         font-family: 'Lato', 'sans-serif';
