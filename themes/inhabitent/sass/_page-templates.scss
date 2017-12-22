@@ -7,6 +7,8 @@
   .site-header {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     position: absolute;
+    border-bottom: 0px;
+    
     a {
       font-family: 'Lato', 'sans-serif';      
       color: #fff;
@@ -35,11 +37,6 @@
     // background: url('../../content-folder/images/logos/inhabitent-logo-full.svg');
   }
   
-  input[type="search"] {
-    color: #f0e4d1;
-    border: none;
-  }
-  
   /* FRONT: SHOP SECTION */
   
   .shop-section {
@@ -59,14 +56,16 @@
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 280px;
+    max-width: 250px;
     border: 1px solid #e1e1e1;
     border-top-width: 5px;
-    padding: 1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
     
     img {
       width: 75px;
       height: 75px;
+      padding-top: 10px;
     }
     
     p{
@@ -100,18 +99,19 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: space-between;
+    overflow: hidden;
   }
   
   .item-container {
     display: flex;
     flex-flow: column wrap;
-    max-width: 350px;
-    margin: 1rem;
+    max-width: 340px;
+    margin: 0.2rem;
+    background-size: fill;
     
     img{
-      max-height: 250px;
-      min-width: 350px;    
+      min-height: 240px;
+      min-width: 340px;    
     }
     
     a, .entry-title{
@@ -286,106 +286,104 @@
   }
   
 }
+/* ABOUT */
 
-/* CONTACT */
-
-// .site, .site-content {
-  //   display: inline-flex;
-  //   width: auto;
-  //   height: auto;
-  // }
+.page-template-about {
   
-  /* ABOUT */
-  
-  .page-template-about {
-    
-    #primary {
-      width: 100%;
-    }
-    
-    .site-header {
-      z-index: 500;
-      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-      position: absolute;
-      a {
-        font-family: 'Lato', 'sans-serif';      
-        color: #fff;
-      }
-      
-      a:hover{
-        color: #f0e4d1;
-      }
-      
-    }
-    
-    .about-hero-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../content-folder/images/product-photos/weathered-canoes.jpg') bottom;
-      background-size: cover, cover;
-      
-    }
-    
-    .entry-title {
-      text-transform: uppercase;
-      color: #fff;
-      font-size: 3rem;
-      font-family: 'Lato', 'sans-serif';
-    }
-    
-    .about-container {
-      @include flex-center;
-      width: 50%;
-    }
+  .content-area {
+    width: 100%;
   }
   
-  .search{
-    .site-content{
-      @include flex-start;
+  .site-header {
+    z-index: 500;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    position: absolute;
+    border-bottom: none;
+    a {
+      font-family: 'Lato', 'sans-serif';      
+      color: #fff;
+    }
+    
+    a:hover{
+      color: #f0e4d1;
+    }
+    
+  }
+  
+  .about-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../content-folder/images/product-photos/weathered-canoes.jpg') bottom;
+    background-size: cover, cover;
+    
+  }
+  
+  .entry-title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Lato', 'sans-serif';
+  }
+  
+  .about-container {
+    @include flex-center;
+    width: 50%;
+  }
+}
+
+.search{
+  .site-content{
+    @include flex-start;
     width: 70%;
   }
-    
-    .page-title{
+  
+  .page-title{
+    text-transform: uppercase;
+  }
+  
+  .entry-title{
+    a{
+      @include green;
+      text-decoration: none;
       text-transform: uppercase;
+      font-size: 2rem;
     }
-    
-    .entry-title{
-      a{
-        @include green;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 2rem;
-      }
+  }
+}
+
+/* CONTACT */
+.page-id-6{
+  .site{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .entry-title{
+    padding-top: 20px;
+		width: 70vw;
+  }
+  .entry-content{
+    width: 70vw;
+    h2, p{
+      padding-left: 10px;
+    }
+    iframe{
+      margin-left: -10px;
     }
   }
   
-  /* CONTACT */
-  .page-id-6{
-    .site{
-      width: 70;
-      color: #000;
-      #primary{
-        padding-right: 4rem;
-      }
-
-    .site-content{
-      display: flex;
-      flex-flow: row wrap;
-    }
-      h1{
-        text-transform: uppercase;
-        font-family: 'Lato', 'sans-serif';
-        font-size: 2.2rem;
-      }
-      h2{
-        font-family: 'Lato', 'sans-serif';
-        font-weight: 700;
-        font-size: 2rem;
-        display: flex;
-        justify-content: flex-start;
-        letter-spacing: 0.1rem;                
-      }
-    }
+  h1{
+    text-transform: uppercase;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 2.2rem;
   }
+  h2{
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    letter-spacing: 0.1rem;                
+  }
+}
