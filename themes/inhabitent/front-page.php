@@ -116,7 +116,7 @@ get_header(); ?>
     <section class="adventure-bottom-right">
     <div class="mountain">
      <div class="adventure-title">
-     <a href="">Taking in the View at Big Mountain</a>
+     <a href="">Taking in the<br>View at Big<br> Mountain</a>
     </div>
     </div>
     <div class="star">

@@ -1069,13 +1069,7 @@ object {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between; }
+            flex-flow: row wrap; }
   .home .product-type {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1090,7 +1084,7 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: 250px;
+    max-width: 270px;
     border: 1px solid #e1e1e1;
     border-top-width: 5px;
     margin-left: 0.2rem;
@@ -1146,12 +1140,15 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    max-width: 340px;
-    margin: 0.2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 370px;
+    max-width: 370px;
     background-size: fill; }
     .home .item-container img {
       min-height: 240px;
-      min-width: 340px; }
+      min-width: 350px; }
     .home .item-container a, .home .item-container .entry-title {
       color: #248a83;
       text-transform: uppercase;
@@ -1187,7 +1184,8 @@ object {
       -webkit-box-direction: normal;
           -ms-flex-flow: column wrap;
               flex-flow: column wrap;
-      width: 50%; }
+      width: 50%;
+      padding-left: 1rem; }
     .home .adventure-section .adventure-bottom-right {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1198,7 +1196,8 @@ object {
               flex-flow: row wrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
+              justify-content: space-between;
+      padding-top: 1rem; }
     .home .adventure-section .adventure-title {
       position: absolute;
       -webkit-box-align: start;
@@ -1206,7 +1205,15 @@ object {
               align-items: flex-start;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      line-height: 2.5rem;
+      padding: 3rem 3rem 0rem 2rem; }
+      .home .adventure-section .adventure-title a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.6rem; }
+      .home .adventure-section .adventure-title a:hover {
+        color: #f0e4d1; }
     .home .adventure-section .canoe {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1215,58 +1222,35 @@ object {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      height: 540px;
+      height: 525px;
       width: 50%;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/canoe-girl.jpg") center;
       background-size: cover; }
       .home .adventure-section .canoe a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 3rem; }
-      .home .adventure-section .canoe a:hover {
-        color: #f0e4d1; }
+        font-size: 2.5rem; }
     .home .adventure-section .beach {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      height: 250px;
+      height: 255px;
       width: 100%;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/beach-bonfire.jpg") center;
       background-size: cover; }
+      .home .adventure-section .beach a {
+        font-size: 2.3rem; }
     .home .adventure-section .mountain {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      height: 250px;
-      width: 270px;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") center;
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") center;
-      background-size: cover;
-      margin: 1rem 1rem 0rem 0rem; }
+      height: 255px;
+      width: 265px;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") top;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/mountain-hikers.jpg") top;
+      background-size: cover; }
+      .home .adventure-section .mountain a {
+        max-width: 200px; }
     .home .adventure-section .star {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      position: relative;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      height: 250px;
-      width: 270px;
+      height: 255px;
+      width: 265px;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../content-folder/images/adventure-photos/night-sky.jpg") center;
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../content-folder/images/adventure-photos/night-sky.jpg") center;
-      background-size: cover;
-      margin: 1rem 0rem 0rem 1rem; }
+      background-size: cover; }
 
 /* SHOP */
 .archive .site, .archive .site-content, .archive .content-area {

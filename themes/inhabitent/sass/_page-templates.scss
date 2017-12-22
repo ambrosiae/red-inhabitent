@@ -46,17 +46,15 @@
   }
   .all-shop {
     display: flex;
-    flex-flow: row wrap;    
-    justify-content: space-between;
-    align-items: space-between;
-  }
+    flex-flow: row wrap;
+    }
   
   .product-type {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 250px;
+    max-width: 270px;
     border: 1px solid #e1e1e1;
     border-top-width: 5px;
     margin-left: 0.2rem;
@@ -105,13 +103,14 @@
   .item-container {
     display: flex;
     flex-flow: column wrap;
-    max-width: 340px;
-    margin: 0.2rem;
+    align-items: center;
+    min-width: 370px;
+    max-width: 370px;
     background-size: fill;
     
     img{
       min-height: 240px;
-      min-width: 340px;    
+      min-width: 350px;    
     }
     
     a, .entry-title{
@@ -144,69 +143,70 @@
       display: flex;
       flex-flow: column wrap;
       width: 50%;
+      padding-left: 1rem;
     }
     
     .adventure-bottom-right {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
+      padding-top: 1rem;
     }
     
     .adventure-title {
       position: absolute;
       align-items: flex-start;
       justify-content: center;
-    }
-    
-    .canoe {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      height: 540px;
-      width: 50%;
-      background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/canoe-girl.jpg') center;
-      background-size: cover;
+      line-height: 2.5rem;
+      padding: 3rem 3rem 0rem 2rem;
       a{
         color: #fff;
         text-decoration: none;
-        font-size: 3rem;
+        font-size: 1.6rem;
       }
       a:hover{
         color: #f0e4d1;
       }
     }
     
-    .beach {
+    .canoe {
       display: flex;
       position: relative;
       justify-content: center;
-      height: 250px;
+      height: 525px;
+      width: 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/canoe-girl.jpg') center;
+      background-size: cover;
+      a{
+        font-size: 2.5rem;
+      }
+    }
+    
+    .beach {
+      height: 255px;
       width: 100%;
       background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/beach-bonfire.jpg') center;
-      background-size: cover;  
+      background-size: cover;
+      a{
+        font-size: 2.3rem;
+      }
     }
     
     .mountain {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      height: 250px;
-      width: 270px;
-      background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/mountain-hikers.jpg') center;
+      height: 255px;
+      width: 265px;
+      background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/mountain-hikers.jpg') top;
       background-size: cover;
-      margin: 1rem 1rem 0rem 0rem;
-      
+      a{
+        max-width: 200px;
+      }
     }
     
     .star {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      height: 250px;
-      width: 270px;
+      height: 255px;
+      width: 265px;
       background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../content-folder/images/adventure-photos/night-sky.jpg') center;
       background-size: cover;
-      margin: 1rem 0rem 0rem 1rem;
     }
     
   }
@@ -359,7 +359,7 @@
     display: flex;
     flex-flow: row wrap;
     padding-top: 50px;
-
+    
   }
   .entry-title{
 		width: 70vw;
