@@ -121,6 +121,30 @@
 	.entry-content{
 		max-width: 65vw;
 		padding-left: 10px;
+		p{
+			font-weight: 100;
+				}
+	}
+	.entry-footer{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		padding-left: 10px;
+		margin-top: 0rem;
+		.cat-links{
+			font-family: 'Lato', 'sans-serif';
+			text-transform: uppercase;
+		}
+		.tags-links{
+			font-family: 'Lato', 'sans-serif';
+			text-transform: uppercase;
+			padding-left: 2rem;
+		}
+		a{
+			color: $green;
+			font-family: 'Lato', 'sans-serif';
+			text-decoration: none;
+		}
 	}
 }
 

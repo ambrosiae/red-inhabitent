@@ -395,7 +395,8 @@ textarea {
     padding: 0.5rem 1.5rem;
     color: white;
     text-transform: uppercase;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    width: 120px; }
   .wpcf7 .wpcf7-text, .comment-respond .wpcf7-text {
     text-transform: initial; }
   .wpcf7 span, .comment-respond span {
@@ -896,6 +897,33 @@ footer {
 .blog .entry-content, .single-post .entry-content {
   max-width: 65vw;
   padding-left: 10px; }
+  .blog .entry-content p, .single-post .entry-content p {
+    font-weight: 100; }
+
+.blog .entry-footer, .single-post .entry-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 10px;
+  margin-top: 0rem; }
+  .blog .entry-footer .cat-links, .single-post .entry-footer .cat-links {
+    font-family: 'Lato', 'sans-serif';
+    text-transform: uppercase; }
+  .blog .entry-footer .tags-links, .single-post .entry-footer .tags-links {
+    font-family: 'Lato', 'sans-serif';
+    text-transform: uppercase;
+    padding-left: 2rem; }
+  .blog .entry-footer a, .single-post .entry-footer a {
+    color: #248a83;
+    font-family: 'Lato', 'sans-serif';
+    text-decoration: none; }
 
 .single-post .nav-previous {
   display: none; }
