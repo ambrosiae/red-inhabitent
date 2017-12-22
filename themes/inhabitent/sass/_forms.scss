@@ -65,9 +65,9 @@ textarea {
 
 /* Added */
 
-/* Contact Form 7 */
+/* Contact Form 7 and Comments Form*/
 
-.wpcf7{
+.wpcf7, .comment-respond{
 	label{
 		text-transform: uppercase;
 		font-family: 'Lato', 'sans-serif';
@@ -75,7 +75,7 @@ textarea {
 	input, textarea{
 		background: #f4f4f4;
 	}
-	.wpcf7-submit{
+	.wpcf7-submit, .submit{
 		background: $green;
 		padding: 0.5rem 1.5rem;
 		color: white;
@@ -88,5 +88,25 @@ textarea {
 	span{
 		color: rgb(180, 2, 2);
 		font-size: 0.8rem;
+	}
+
+	/* Comment Form */
+	.comment-reply-title{
+		text-transform: uppercase;
+		font-family: 'Lato', 'sans-serif';
+		font-size: 2rem;
+	}
+	.comment-form-author{
+		width: 50%;
+		position: relative;
+	}
+	.comment-form-email{
+		width: 22rem;
+		position: absolute;
+		margin-top: -5.3rem;
+		margin-left: 25rem;
+	}
+	input{
+		width: 100%;
 	}
 }

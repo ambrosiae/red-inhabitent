@@ -358,9 +358,10 @@
   .site{
     display: flex;
     flex-flow: row wrap;
+    padding-top: 50px;
+
   }
   .entry-title{
-    padding-top: 20px;
 		width: 70vw;
   }
   .entry-content{

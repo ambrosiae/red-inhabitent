@@ -382,27 +382,39 @@ textarea {
   width: 100%; }
 
 /* Added */
-/* Contact Form 7 */
-.wpcf7 label {
-  text-transform: uppercase;
-  font-family: 'Lato', 'sans-serif'; }
-
-.wpcf7 input, .wpcf7 textarea {
-  background: #f4f4f4; }
-
-.wpcf7 .wpcf7-submit {
-  background: #248a83;
-  padding: 0.5rem 1.5rem;
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9rem; }
-
-.wpcf7 .wpcf7-text {
-  text-transform: initial; }
-
-.wpcf7 span {
-  color: #b40202;
-  font-size: 0.8rem; }
+/* Contact Form 7 and Comments Form*/
+.wpcf7, .comment-respond {
+  /* Comment Form */ }
+  .wpcf7 label, .comment-respond label {
+    text-transform: uppercase;
+    font-family: 'Lato', 'sans-serif'; }
+  .wpcf7 input, .wpcf7 textarea, .comment-respond input, .comment-respond textarea {
+    background: #f4f4f4; }
+  .wpcf7 .wpcf7-submit, .wpcf7 .submit, .comment-respond .wpcf7-submit, .comment-respond .submit {
+    background: #248a83;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem; }
+  .wpcf7 .wpcf7-text, .comment-respond .wpcf7-text {
+    text-transform: initial; }
+  .wpcf7 span, .comment-respond span {
+    color: #b40202;
+    font-size: 0.8rem; }
+  .wpcf7 .comment-reply-title, .comment-respond .comment-reply-title {
+    text-transform: uppercase;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 2rem; }
+  .wpcf7 .comment-form-author, .comment-respond .comment-form-author {
+    width: 50%;
+    position: relative; }
+  .wpcf7 .comment-form-email, .comment-respond .comment-form-email {
+    width: 22rem;
+    position: absolute;
+    margin-top: -5.3rem;
+    margin-left: 25rem; }
+  .wpcf7 input, .comment-respond input {
+    width: 100%; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1397,10 +1409,10 @@ object {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+  padding-top: 50px; }
 
 .page-id-6 .entry-title {
-  padding-top: 20px;
   width: 70vw; }
 
 .page-id-6 .entry-content {
