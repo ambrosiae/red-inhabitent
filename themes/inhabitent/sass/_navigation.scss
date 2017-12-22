@@ -43,6 +43,7 @@ a {
 	top: 0px;
 	padding: 0.8rem;
 	z-index: 100;	
+	height: 50px;
 	i{
 		@include green;
 	}
@@ -70,6 +71,12 @@ a {
 		text-transform: uppercase;		
 		text-decoration: none;
 		font-family: 'Lato', 'sans-serif';
+	
+		.logo-tent{
+			justify-content: flex-start;
+			height: 35px;
+			margin-right: 10rem;
+		}
 	}
 	
 	li {
@@ -93,11 +100,6 @@ a {
 		border: none;
 		background: transparent;
 		padding-right: 10rem;
-	}
-	
-	.logo-tent{
-		justify-content: flex-start;
-		height: 35px;
 	}
 }
 

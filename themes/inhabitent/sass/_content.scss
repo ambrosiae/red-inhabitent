@@ -66,15 +66,13 @@
 	}
 	
 	.blog-post{
-		width: 45vw;
+		max-width: 55vw;
 	}
 	
 	.entry-header{
 		display: flex;
 		position: relative;
 		flex-flow: column wrap;
-		overflow: hidden;
-		height: 55vh;
 		
 		.entry-title {
 			@include label-blocks;		
@@ -99,16 +97,14 @@
 		}
 		
 		.blog-image {
-			img{
-				width: 100%;				
-			}
+			background-size: cover;
+
 		}
 		
 		.entry-meta {
 			position: absolute;			
-			bottom: 1px;
+			bottom: 8px;
 			right: 0px;
-			width: 50%;
 			display: flex;
 			justify-content: center;
 			background-color: #248a83;
