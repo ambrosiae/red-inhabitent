@@ -49,14 +49,16 @@
 
 /* Added */
 
+
 /* Journal */
 
-.blog, .single-post{
+.single-post{
 	
 	.site-content{
-		@include width70;
 		display: flex;
-		flex-flow: row wrap;	
+		justify-content: center;
+		flex-flow: row wrap;
+		margin: auto;
 	}
 	
 	#content{
@@ -64,21 +66,22 @@
 	}
 	
 	.blog-post{
-		padding: 3rem 3rem;
+		width: 45vw;
 	}
 	
 	.entry-header{
 		display: flex;
 		position: relative;
 		flex-flow: column wrap;
-		margin-bottom: 8rem;		
+		overflow: hidden;
+		height: 55vh;
 		
 		.entry-title {
 			@include label-blocks;		
 			position: absolute;
 			margin-top: 50px;
 			word-wrap: wrap;
-			width: 35rem;
+			width: 30rem;
 			line-height: 3rem;
 			text-align: left;
 			font-family: 'Lato', 'sans-serif';
@@ -120,17 +123,34 @@
 			}
 		}
 	}
-	
-	.entry-content {
-		.BodyA{
-			line-height: 1.75rem;
-		}
-	}
-	
 }
 
 .single-post{
 	.nav-previous{
 		display: none;
+	}
+	h2, .comments-title{
+		text-align: left;
+		font-weight: 700;
+	}
+	.comment-body{
+		display: flex;
+		justify-content: flex-start;
+		margin-left: -40px;
+	}
+	.comment-content{
+		padding-left: 2rem;
+		a{
+			color: #248a83;
+			text-decoration: none;
+		}
+		.comment-meta{
+			font-weight: 700;
+			color: #a1a1a1;
+		}
+		#cite, .comment-author, .vcard, .fn{
+			font-style: normal;
+			color: #000;
+		}
 	}
 }

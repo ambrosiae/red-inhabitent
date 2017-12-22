@@ -35,9 +35,9 @@
 					<a class="nav-toggle" aria-controls="primary-menu" aria-expanded="true"><?php
 					esc_html( 'Primary Menu' );
 					?></a>
-										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container' => '') ); ?>
+										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'primary-menu') ); ?>
 
-					<div><?php get_search_form(); ?></div>
+					<div class='search-nav'><?php get_search_form(); ?></div>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 			<div id="content" class="site-content">

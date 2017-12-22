@@ -2,16 +2,64 @@
 # Widgets
 --------------------------------------------------------------*/
 
-.widget {
-	margin: 0 0 $base__space-unit;
-
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
-}
-
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
+}
+
+/* SIDEBAR */
+
+.widget-area{
+	border-left: 1px solid #e4e4e4;
+	margin-left: 2rem;
+  h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;    
+    justify-content: flex-start;
+  }
+  .widget_text {
+    margin: 3rem 0rem 0rem 3rem;
+    .contact-meta {
+      a {
+        @include green;
+        text-decoration: none;
+      }
+      i, .fa{
+        color: #404040;
+      }
+      p{
+        color: #404040;
+      }
+    }
+    .day-of-week {
+      font-weight: 900;
+    }
+  }
+  .widget_archive {
+    h2{
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;    
+      justify-content: flex-start;
+      margin: 3rem 0rem 0rem 3rem;
+    }
+    ul{
+      list-style-type: none;
+      
+      a{
+        @include green;
+				text-decoration: none;
+				padding-left: 0.8rem;
+      }
+    }
+  }
+}
+
+h2{
+  font-family: 'Lato', 'sans-serif';
+  text-align: center;    
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 300;
 }

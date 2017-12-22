@@ -1,18 +1,18 @@
-footer, .site-footer, #colophon{
+footer,{
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-top: 5rem;
   
   .footer-all {
     height: 350px;
-    width: 100vw;
+    width: 100%;
     background: url('../../content-folder/images/dark-wood@2x.png');
     
     .footer-text{
       @include flex-center;
-      @include width70;
+      width: 90%;
       padding-top: 3rem;
       flex-flow: row wrap;
       justify-content: space-between;
@@ -58,7 +58,6 @@ footer, .site-footer, #colophon{
         flex-flow: column wrap;
         color: #fff;
         line-height: 0rem;
-        margin-left: -15rem;
         p
         {
           margin-bottom: 0px;

@@ -1,69 +1,7 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
-/* SIDEBAR */
-
-#primary {
-  flex: 0 1 75%;
-}
-#secondary {
-  border-left: 1px solid #e4e4e4;
-  h2{
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;    
-    justify-content: flex-start;
-  }
-  .widget_text {
-    margin: 3rem 0rem 0rem 3rem;
-    .contact-meta {
-      a {
-        @include green;
-        text-decoration: none;
-      }
-      i, .fa{
-        color: #404040;
-      }
-      p{
-        color: #404040;
-      }
-    }
-    .day-of-week {
-      font-weight: 900;
-    }
-  }
-  .widget_archive {
-    h2{
-      font-size: 1.5rem;
-      font-weight: 700;
-      display: flex;    
-      justify-content: flex-start;
-      margin: 3rem 0rem 0rem 3rem;
-    }
-    ul{
-      list-style-type: none;
-      
-      a{
-        @include green;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-h2{
-  font-family: 'Lato', 'sans-serif';
-  text-align: center;    
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
 /* FRONT PAGE */
-
-.site, .site-content {
-}
 
 .home {  
   .site-header {
@@ -275,8 +213,6 @@ h2{
   
 }
 
-/* JOURNAL */
-
 /* SHOP */
 
 .archive {
@@ -408,8 +344,8 @@ h2{
   .search{
     .site-content{
       @include flex-start;
-      @include width70;
-    }
+    width: 70%;
+  }
     
     .page-title{
       text-transform: uppercase;
@@ -426,9 +362,9 @@ h2{
   }
   
   /* CONTACT */
-  .page-template-default{
+  .page-id-6{
     .site{
-      @include width70;
+      width: 70;
       color: #000;
       #primary{
         padding-right: 4rem;

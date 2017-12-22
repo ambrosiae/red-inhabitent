@@ -32,12 +32,9 @@ a {
 
 /* Menus */
 
-.site {
-	@include flex-center;
-}
-
 .site-header {
-	width: 100%;	
+	justify-content: flex-end;
+	width: 100%;
 	clear: both;
 	display: inline-flex;
 	align-items: center;
@@ -60,9 +57,8 @@ a {
 
 .menu, ul{
 		display: flex;
-		margin-top: -5px;
-		margin-bottom: -5px;
-		margin-left: 30rem;
+		justify-content: flex-end;
+		align-items: flex-end;
 	}
 	.menu-item {
 		padding-left: 1.5rem;
@@ -96,12 +92,12 @@ a {
 		text-transform: uppercase;
 		border: none;
 		background: transparent;
+		padding-right: 10rem;
 	}
 	
 	.logo-tent{
 		justify-content: flex-start;
 		height: 35px;
-		margin-left: 18rem;		
 	}
 }
 
@@ -125,7 +121,6 @@ a {
 .post-navigation {
 	
 	.site-main & {
-		margin: 0 0 $base__space-unit;
 		overflow: hidden;
 	}
 	
