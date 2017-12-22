@@ -953,6 +953,76 @@ footer {
     font-style: normal;
     color: #000; }
 
+.single-post .single-product-buttons-first {
+  margin-top: 0.5rem;
+  margin-left: -1.2rem; }
+
+.single-post i {
+  padding-right: 0.5rem; }
+
+button {
+  border: #000 solid 1px;
+  background: transparent;
+  text-transform: uppercase;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 0.9rem;
+  padding: 0.5rem 1.3rem; }
+  button i {
+    padding-right: 0.5rem; }
+
+/* Single Product Page */
+.single-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 100px; }
+  .single-product article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .single-product .single-photo {
+    overflow: hidden;
+    width: 50vw; }
+  .single-product .single-info {
+    width: 45vw;
+    padding: 0rem 2rem; }
+    .single-product .single-info .entry-title {
+      font-family: 'Lato', 'sans-serif';
+      text-transform: uppercase;
+      color: #d99054;
+      font-size: 2.2rem; }
+    .single-product .single-info .price {
+      font-family: 'Lato', 'sans-serif';
+      font-size: 1.5rem;
+      line-height: 1rem; }
+    .single-product .single-info .entry-content p .BodyA {
+      line-height: 1.5rem; }
+    .single-product .single-info button {
+      border: #000 solid 1px;
+      background: transparent;
+      text-transform: uppercase;
+      font-family: 'Lato', 'sans-serif';
+      font-size: 0.9rem;
+      padding: 0.5rem 1.3rem; }
+      .single-product .single-info button i {
+        padding-right: 0.5rem; }
+    .single-product .single-info .footer-all {
+      width: 100vw; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1268,6 +1338,14 @@ object {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
 
+.archive .page-title {
+  padding-top: 5rem;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center; }
+
 .archive .product-type-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1281,7 +1359,10 @@ object {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  border-bottom: #c8c8c8 dotted 1px;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem; }
 
 .archive .product-type {
   -webkit-box-pack: center;
@@ -1294,7 +1375,8 @@ object {
   .archive .product-type a {
     color: #248a83;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.2rem; }
 
 .archive .all-items {
   display: -webkit-box;
@@ -1324,18 +1406,32 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -ms-flex-preferred-size: 24%;
-      flex-basis: 24%;
-  -ms-flex-negative: 250px 250px 250px 250px;
-      flex-shrink: 250px 250px 250px 250px;
-  padding: 0rem 1rem; }
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -ms-flex-negative: 275px 275px 275px 275px;
+      flex-shrink: 275px 275px 275px 275px;
+  padding: 0rem 0.7rem; }
 
 .archive .product-image img {
-  background-size: cover; }
+  height: 20vw;
+  width: 23vw;
+  background-size: cover;
+  border-bottom: #c8c8c8 solid 5px; }
 
-.archive .entry-meta {
-  margin-top: -30px;
-  color: #fff; }
+.archive .entry-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #c8c8c8 solid 1px;
+  border-top: none;
+  margin-top: -50px;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  text-transform: initial;
+  font-family: 'Miriam Libre', 'serif'; }
 
 /* ABOUT */
 .page-template-about .content-area {

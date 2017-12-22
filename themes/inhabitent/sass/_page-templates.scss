@@ -222,11 +222,24 @@
     flex-flow: row wrap;
   }
   
+  .page-title{
+    padding-top: 5rem;
+    font-family: 'Lato', 'sans-serif';
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   .product-type-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    border-bottom: #c8c8c8 dotted 1px;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+
   }
   
   .product-type {
@@ -238,6 +251,7 @@
       @include green;
       text-transform: uppercase;
       text-decoration: none;
+      font-size: 1.2rem;
     }
   }
   
@@ -261,28 +275,30 @@
   .item-container {
     display: flex;
     flex-flow: column wrap;
-    flex-basis: 24%;
-    flex-shrink: 250px 250px 250px 250px;
-    padding: 0rem 1rem;
+    flex-basis: 25%;
+    flex-shrink: 275px 275px 275px 275px;
+    padding: 0rem 0.7rem;
   }
   
   .product-image {
     img{
-      // height: 250px;
-      // width: 250px;
+      height: 20vw;
+      width: 23vw;
       background-size: cover;
+      border-bottom: #c8c8c8 solid 5px;
     }
   }
   
-  .entry-meta {
-    // justify-content: flex-end;
-    // align-items: flex-end;
-    margin-top: -30px;
-    color: #fff;
-  }
-  
-  .entry-content {
-    
+  .entry-title {
+    display: flex;
+    justify-content: center;
+    border: #c8c8c8 solid 1px;
+    border-top: none;
+    margin-top: -50px;
+    padding-top: 55px;
+    padding-bottom: 10px;
+    text-transform: initial;
+    font-family: 'Miriam Libre', 'serif';
   }
   
 }
