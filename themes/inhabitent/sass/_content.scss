@@ -179,9 +179,6 @@
 		margin-top: 0.5rem;
 		margin-left: -1.2rem;
 	}
-	i{
-		padding-right: 0.5rem;
-	}
 }
 button{
 	@include media-buttons;
@@ -205,7 +202,7 @@ button{
 	}
 	.single-info{
 		width: 45vw;
-		padding: 0rem 2rem;
+		padding-right: 2rem;
 		.entry-title{
 			font-family: 'Lato', 'sans-serif';
 			text-transform: uppercase;
@@ -227,8 +224,8 @@ button{
 		button{
 			@include media-buttons;
 		}
-		.footer-all{
-			width: 100vw;
-		}
+	}
+	.footer-all{
+		width: 100vw;
 	}
 }

@@ -47,7 +47,7 @@
   .all-shop {
     display: flex;
     flex-flow: row wrap;
-    }
+  }
   
   .product-type {
     display: flex;
@@ -223,14 +223,13 @@
   }
   
   .page-title{
-    padding-top: 5rem;
     font-family: 'Lato', 'sans-serif';
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
   }
-
+  
   .product-type-container {
     display: flex;
     flex-flow: row wrap;
@@ -239,7 +238,7 @@
     border-bottom: #c8c8c8 dotted 1px;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
-
+    
   }
   
   .product-type {
@@ -294,9 +293,10 @@
     justify-content: center;
     border: #c8c8c8 solid 1px;
     border-top: none;
-    margin-top: -50px;
-    padding-top: 55px;
+    margin-top: -12px;
+    padding-top: 12px ;
     padding-bottom: 10px;
+    margin-left: -0.3px;
     text-transform: initial;
     font-family: 'Miriam Libre', 'serif';
   }
@@ -349,26 +349,6 @@
   }
 }
 
-.search{
-  .site-content{
-    @include flex-start;
-    width: 70%;
-  }
-  
-  .page-title{
-    text-transform: uppercase;
-  }
-  
-  .entry-title{
-    a{
-      @include green;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 2rem;
-    }
-  }
-}
-
 /* CONTACT */
 .page-id-6{
   .site{
@@ -402,5 +382,140 @@
     display: flex;
     justify-content: flex-start;
     letter-spacing: 0.1rem;                
+  }
+}
+
+/* Product Type Page */
+.archive{
+  padding-top: 100px;
+  .page-header{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 700;
+    .taxonomy-description{
+      text-transform: initial;
+      padding: 1rem 0rem;
+      font-weight: 300;
+      border-bottom: #c8c8c8 dotted 1px;
+      margin-bottom: 3rem;
+    }
+  }
+  .shop{
+    display: flex;
+    flex-flow: row wrap;
+    .entry-header{
+      display: flex;
+      flex-flow: column wrap;
+      flex-basis: 25%;
+      flex-shrink: 275px 275px 275px 275px;
+      padding: 0rem 0.7rem;
+    }
+    
+    .blog-image {
+      img{
+        height: 20vw;
+        width: 23vw;
+        background-size: cover;
+        border-bottom: #c8c8c8 solid 5px;
+      }
+    }
+  }
+  .blog-post{
+    width: 25vw;
+  }
+  .entry-content{
+    display: none;
+  }
+}
+
+/* SEARCH */
+.search-results{
+  .site-content{
+    display: flex;
+    flex-flow: row wrap;
+    .widget-area{
+      padding-top: 50px;
+      margin-left: 0rem;
+    }
+    .content-area{
+      width: 72%;
+      padding-top: 70px;
+      padding-left: 1rem;
+      .page-title{
+        font-family: 'Lato', 'sans-serif';
+        font-size: 2.3rem;
+        border-bottom: #c8c8c8 solid 1px;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+        
+      }
+      .page-title span{
+        font-family: 'Lato', 'sans-serif';
+        font-size: 2.3rem;
+      }
+      
+      .entry-title{
+        display: flex;
+        justify-content: flex-start;
+        a{
+          @include green;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-family: 'Lato', 'sans-serif';
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* Error 404 page */
+.error404{
+  .site-content{
+    display: flex;
+    flex-flow: row wrap;
+    .widget-area{
+      padding-top: 50px;
+      margin-left: 0rem;
+    }
+    .content-area{
+      width: 72%;
+      padding-top: 70px;
+      padding-left: 1rem;
+      .fa-search{
+        display: none;
+      }
+      input{
+        min-width: 180px;
+        text-transform: initial;
+        background: #f4f4f4;
+        font-family: 'Miriam Libre', 'serif';
+        font-size: 1.2rem;
+      }
+      .widgettitle, .widget-title{
+        display: flex;
+        justify-content: flex-start;
+        font-family: 'Lato', 'sans-serif';
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      ul{
+        list-style: none;
+        margin-left: -2.5rem;
+        a{
+          color: $green;
+          text-decoration: none;
+        }
+      }
+      .widget_archive{
+        p{
+          font-family: 'Lato', 'sans-serif';
+        }
+      }
+    }
   }
 }
